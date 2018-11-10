@@ -1,0 +1,51 @@
+<div *ngIf="colorCollection">
+	<div class="title_bar">
+		<div id="open_color_input">
+			<input type="text" placeholder="Untitled" [(ngModel)]="colorCollection.name" onClick="this.setSelectionRange(0, this.value.length)">
+			<h1 id="open_color_title">{{colorCollection.name}}</h1>
+			<div id="open_color_input_border"></div>
+		</div>
+		<div class="buttons">
+			<button type="button" name="button">
+				<img src="ios-albums.svg" />
+			</button>
+			<button type="button" name="button">
+				<img src="ios-share.svg" />
+			</button>
+			<button type="button" name="button" class="overflow">
+				<div>
+
+				</div>
+				<div>
+
+				</div>
+				<div>
+
+				</div>
+			</button>
+		</div>
+	</div>
+
+	<div id="color_preview" [style.background]="colorCollection.hex"></div>
+
+	<div class="title_bar" style="margin-top: 20px;">
+		<div class="tab_bar">
+			<a href="#" class="selected">HEX</a>
+			<a href="#">RGB</a>
+			<a href="#">HSL</a>
+			<a href="#">HEX</a>
+		</div>
+		<div class="buttons">
+
+		</div>
+	</div>
+
+	<div id="open_color_controls" class="active_color_panel">
+		<input type="text" [(ngModel)]="colorCollection.hex" id="hex_input">
+		<hr/>
+		<button type="button" name="button" (click)="copyHEX()" class="copy_button">Copy HEX</button>
+	</div>
+
+	<input type="color" name="" [(ngModel)]="colorCollection.hex">
+
+</div>

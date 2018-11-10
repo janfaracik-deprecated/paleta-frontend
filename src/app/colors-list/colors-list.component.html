@@ -1,0 +1,17 @@
+<div class="title_bar">
+	<h1>Colors</h1>
+	<div class="buttons">
+		<button type="button" name="button">
+			<img src="ios-add.svg" />
+		</button>
+		<button type="button" name="button">
+			<img src="ios-funnel.svg" />
+		</button>
+	</div>
+</div>
+<div class="list">
+	<div class="item" *ngFor="let colorCollection of dataService.colorCollections" (click)="onSelect(colorCollection)" [ngClass]="{'selected': selectedColorCollection == colorCollection}">
+		<div class="color" [style.background]="colorCollection.hex"></div>
+		<p>{{ colorCollection.name }}</p>
+	</div>
+</div>

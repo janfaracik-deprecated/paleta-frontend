@@ -1,0 +1,27 @@
+.item {
+	position: relative;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: 16px;
+	line-height: 30px;
+	z-index: 0;
+}
+
+.item .color {
+	width: 30px;
+	height: 30px;
+	border-radius: var(--border-radius-small);
+	transition: background .4s ease;
+}
+
+.selected:before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	bottom: -5px;
+	right: -5px;
+	background: RGB(var(--input-color));
+	border-radius: var(--border-radius-small);
+	z-index: -1;
+}

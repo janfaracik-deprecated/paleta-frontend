@@ -1,0 +1,45 @@
+:host {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: rgba(125, 125, 125, 0.025);
+	box-shadow: inset -10px 0 30px rgba(0, 0, 0, 0.02);
+}
+
+.resizer {
+	position: absolute;
+	top: 0;
+	right: -5px;
+	bottom: 0;
+	width: 10px;
+	cursor: ew-resize;
+	opacity: 0;
+	transition: .2s ease;
+}
+
+.resizer:hover {
+	opacity: 1;
+}
+
+.resizer:hover:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 2px;
+	bottom: 0;
+	width: 10px;
+	background-color: RGB(var(--background-color));
+}
+
+.resizer:hover:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 6px;
+	height: 20px;
+	width: 2px;
+	transform: translateY(-50%);
+	background-color: RGB(var(--foreground-color));
+	border-radius: 100px;
+	opacity: .5;
+}
