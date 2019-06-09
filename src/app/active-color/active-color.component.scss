@@ -68,6 +68,7 @@ input:focus+h1+#open_color_input_border {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: white;
 }
 
 .overflow div {
@@ -79,23 +80,6 @@ input:focus+h1+#open_color_input_border {
 
 .overflow div:nth-of-type(2) {
 	margin: 0 3px;
-}
-
-.tab_bar {
-	height: 34px;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-}
-
-.tab_bar * {
-	margin-right: 10px;
-	text-decoration: none;
-	opacity: .6;
-}
-
-.tab_bar .selected {
-	opacity: 1 !important;
 }
 
 #open_color_controls {

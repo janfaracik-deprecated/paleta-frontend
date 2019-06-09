@@ -1,0 +1,127 @@
+<div class="setup-aurora">
+	<div class="setup-bubble">
+
+	</div>
+	<div class="setup-bubble">
+
+	</div>
+	<div class="setup-bubble">
+
+	</div>
+	<div class="setup-bubble">
+
+	</div>
+	<div class="setup-bubble">
+
+	</div>
+</div>
+
+<div class="setup-aurora-overlay"></div>
+
+<div class="setup-aurora-blur"></div>
+
+<div class="setup-dialog" *ngIf="step=='initial'" [@slideInOut]>
+	<h1 class="setup-text">
+		Welcome to<br>
+		<span class="setup-text--colourful">Paleta.io</span>
+	</h1>
+	<p class="setup-hint">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque facilisis nibh, sit amet fermentum nisl faucibus quis.
+	</p>
+	<button type="button" class="button setup-button" name="button" (click)="changeStep('first_steps')">
+		Let's begin
+		<div class="setup-arrow-container">
+			<div class="setup-arrow-circle"></div>
+			<div class="setup-arrow-circle"></div>
+			<div class="setup-arrow">
+				<svg width="11px" height="18px" viewBox="0 0 11 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				        <path d="M10.4179739,10.4179739 C10.3748417,10.461106 8.0329494,12.7944393 3.39229692,17.4179739 C2.61626207,18.1940087 1.35806098,18.1940087 0.582026135,17.4179739 C-0.194008712,16.641939 -0.194008712,15.3837379 0.582026135,14.6077031 L6.18972922,9 L0.582026135,3.39229692 C-0.194008712,2.61626207 -0.194008712,1.35806098 0.582026135,0.582026135 C1.35806098,-0.194008712 2.61626207,-0.194008712 3.39229692,0.582026135 L10.214384,7.40411319 C10.2852261,7.4580236 10.3532756,7.51732791 10.4179739,7.58202614 C10.8092564,7.97330872 11.0032514,8.48717011 10.9999588,9 C11.0032514,9.51282994 10.8092564,10.0266913 10.4179739,10.4179739 Z"></path>
+				    </g>
+				</svg>
+			</div>
+		</div>
+	</button>
+</div>
+
+<div class="setup-dialog" *ngIf="step=='first_steps'" [@slideInOut]>
+	<h1 class="setup-text">
+		First Steps
+	</h1>
+	<div class="setup-login-register-container">
+		<button class="button" (click)="changeStep('signin')">
+			<div class="setup-login-register-icon">
+				<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				        <path d="M30.9421753,36 L4.99779623,36 C4.95682721,34.5423148 4.9611172,33.7000463 5.01066619,33.4731944 C5.49714722,31.3090278 8.27414311,30.2541667 9.23359182,29.9138889 C10.2876341,29.5395833 11.7876172,29.4511111 12.7538226,29.2333333 C13.3078705,29.1108333 14.1119155,28.8045833 14.3821827,28.4779167 C14.65245,28.15125 14.4902896,25.1227778 14.4902896,25.1227778 C14.4902896,25.1227778 13.9902952,24.3401389 13.720028,23.6459722 C13.4497608,22.9586111 13.1524668,21.0666667 13.1524668,21.0666667 C13.1524668,21.0666667 12.5916623,21.0666667 12.4024752,20.0866667 C12.1930181,19.0181944 11.8619407,18.6030556 11.9024808,17.8068056 C11.9430209,17.0241667 12.3686918,17.0445833 12.3686918,17.0445833 C12.3686918,17.0445833 11.9700476,15.9080556 11.9159942,13.5533333 C11.855184,10.75625 13.9835386,8 17.976737,8 C21.915882,8 24.0915333,10.75625 24.0307232,13.5533333 C23.9834264,15.9080556 23.5712689,17.0445833 23.5712689,17.0445833 C23.5712689,17.0445833 23.9969398,17.0241667 24.0374799,17.8068056 C24.07802,18.6030556 23.7469426,19.0181944 23.5374855,20.0866667 C23.3415417,21.0666667 22.7874939,21.0666667 22.7874939,21.0666667 C22.7874939,21.0666667 22.4901999,22.9586111 22.2199327,23.6459722 C21.9496655,24.3401389 21.4496711,25.1227778 21.4496711,25.1227778 C21.4496711,25.1227778 21.2875107,28.15125 21.557778,28.4779167 C21.8280452,28.8045833 22.6320902,29.1108333 23.1861381,29.2333333 C24.1523435,29.4511111 25.6523266,29.5395833 26.7063689,29.9138889 C27.6658176,30.2541667 30.4428135,31.3090278 30.9292945,33.4731944 C30.9788435,33.7000463 30.9831371,34.5423148 30.9421753,36 Z" id="Path" fill="#000000"></path>
+				    </g>
+				</svg>
+			</div>
+			I already have an account
+		</button>
+		<button class="button" (click)="changeStep('register')">
+			<div class="setup-login-register-icon">
+				<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				        <path d="M19,17 L27,17 C27.5522847,17 28,17.4477153 28,18 C28,18.5522847 27.5522847,19 27,19 L19,19 L19,27 C19,27.5522847 18.5522847,28 18,28 C17.4477153,28 17,27.5522847 17,27 L17,19 L9,19 C8.44771525,19 8,18.5522847 8,18 C8,17.4477153 8.44771525,17 9,17 L17,17 L17,9 C17,8.44771525 17.4477153,8 18,8 C18.5522847,8 19,8.44771525 19,9 L19,17 Z" id="Path" fill="#FFFFFF"></path>
+				    </g>
+				</svg>
+			</div>
+			I need to register an account
+		</button>
+	</div>
+</div>
+
+<div class="setup-dialog" *ngIf="step=='signin'" [@slideInOut]>
+	<h1 class="setup-text">
+		Sign in
+	</h1>
+	<p class="setup-field-hint">Email</p>
+	<input type="text" name="" value="" class="input setup-input">
+	<p class="setup-field-hint">Password</p>
+	<input type="password" name="" value="" class="input setup-input password">
+	<button type="button" class="button setup-button" name="button">
+		Let's go
+		<div class="setup-arrow-container">
+			<div class="setup-arrow-circle"></div>
+			<div class="setup-arrow-circle"></div>
+			<div class="setup-arrow">
+				<svg width="11px" height="18px" viewBox="0 0 11 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<path d="M10.4179739,10.4179739 C10.3748417,10.461106 8.0329494,12.7944393 3.39229692,17.4179739 C2.61626207,18.1940087 1.35806098,18.1940087 0.582026135,17.4179739 C-0.194008712,16.641939 -0.194008712,15.3837379 0.582026135,14.6077031 L6.18972922,9 L0.582026135,3.39229692 C-0.194008712,2.61626207 -0.194008712,1.35806098 0.582026135,0.582026135 C1.35806098,-0.194008712 2.61626207,-0.194008712 3.39229692,0.582026135 L10.214384,7.40411319 C10.2852261,7.4580236 10.3532756,7.51732791 10.4179739,7.58202614 C10.8092564,7.97330872 11.0032514,8.48717011 10.9999588,9 C11.0032514,9.51282994 10.8092564,10.0266913 10.4179739,10.4179739 Z"></path>
+					</g>
+				</svg>
+			</div>
+		</div>
+	</button>
+</div>
+
+<div class="setup-dialog" *ngIf="step=='register'" [@slideInOut]>
+	<h1 class="setup-text">
+		Register
+	</h1>
+	<p class="setup-field-hint">Picture</p>
+	<input type="text" name="" value="" class="input setup-input">
+	<p class="setup-field-hint">First name</p>
+	<input type="text" name="" value="" class="input setup-input">
+	<p class="setup-field-hint">Last name</p>
+	<input type="text" name="" value="" class="input setup-input">
+	<p class="setup-field-hint">Email</p>
+	<input type="text" name="" value="" class="input setup-input">
+	<p class="setup-field-hint">Password</p>
+	<input type="password" name="" value="" class="input setup-input password">
+	<button type="button" class="button setup-button" name="button">
+		Let's go
+		<div class="setup-arrow-container">
+			<div class="setup-arrow-circle"></div>
+			<div class="setup-arrow-circle"></div>
+			<div class="setup-arrow">
+				<svg width="11px" height="18px" viewBox="0 0 11 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<path d="M10.4179739,10.4179739 C10.3748417,10.461106 8.0329494,12.7944393 3.39229692,17.4179739 C2.61626207,18.1940087 1.35806098,18.1940087 0.582026135,17.4179739 C-0.194008712,16.641939 -0.194008712,15.3837379 0.582026135,14.6077031 L6.18972922,9 L0.582026135,3.39229692 C-0.194008712,2.61626207 -0.194008712,1.35806098 0.582026135,0.582026135 C1.35806098,-0.194008712 2.61626207,-0.194008712 3.39229692,0.582026135 L10.214384,7.40411319 C10.2852261,7.4580236 10.3532756,7.51732791 10.4179739,7.58202614 C10.8092564,7.97330872 11.0032514,8.48717011 10.9999588,9 C11.0032514,9.51282994 10.8092564,10.0266913 10.4179739,10.4179739 Z"></path>
+					</g>
+				</svg>
+			</div>
+		</div>
+	</button>
+</div>

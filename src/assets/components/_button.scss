@@ -1,0 +1,19 @@
+.button {
+	cursor: pointer;
+	background-color: var(--button-background-color);
+	text-decoration: none;
+	word-wrap: normal;
+	padding: 15px 25px;
+	transition: .2s ease;
+	border-radius: 1000px;
+	outline: 0;
+	border: 0;
+	font-size: 1rem;
+	&:hover {
+		background-color: var(--button-background-color--hover);
+	}
+	&:active {
+		background-color: var(--button-background-color--active);
+		transform: scale(0.95);
+	}
+}

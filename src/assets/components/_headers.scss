@@ -1,0 +1,49 @@
+/* Headers */
+
+.paleta-heading-xl {
+	font-size: 300%;
+	margin-bottom: var(--margin);
+	font-weight: 700;
+}
+
+.paleta-heading-l {
+	font-size: 250%;
+	margin-bottom: var(--margin);
+	font-weight: 700;
+}
+
+.paleta-heading-m {
+	font-size: 200%;
+	margin-bottom: var(--margin);
+	font-weight: 700;
+}
+
+.paleta-heading-s {
+	font-size: 150%;
+	margin-bottom: var(--margin);
+	font-weight: 700;
+}
+
+/* Captions */
+
+$caption-opacity: 0.45;
+
+.paleta-caption-xl {
+	font-size: 150%;
+	opacity: $caption-opacity;
+}
+
+.paleta-caption-l {
+	font-size: 125%;
+	opacity: $caption-opacity;
+}
+
+.paleta-caption-m {
+	font-size: 100%;
+	opacity: $caption-opacity;
+}
+
+.paleta-caption-s {
+	font-size: 75%;
+	opacity: $caption-opacity;
+}

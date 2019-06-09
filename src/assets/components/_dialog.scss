@@ -1,0 +1,33 @@
+.dialog-shadow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--dialog-shadow-color);
+	-webkit-backdrop-filter: blur(2px);
+	backdrop-filter: blur(2px);
+}
+
+.dialog {
+	width: 340px;
+	height: 400px;
+	background-color: RGB(var(--dialog-background-color));
+	border: 1px solid RGB(var(--dialog-border-color));
+	box-shadow: var(--drop-shadow);
+	border-radius: var(--dialog-border-radius);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.dialog-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	background: red;
+	border-radius: 100%;
+}

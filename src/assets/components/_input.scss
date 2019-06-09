@@ -1,0 +1,22 @@
+.input {
+	display: block;
+	border: 0;
+	outline: 0;
+	border-radius: 6px;
+	line-height: 40px;
+	background-color: var(--button-background-color);
+	font-size: 1.2rem;
+	padding: 0 10px;
+
+	&:hover {
+		background-color: var(--button-background-color--hover);
+	}
+
+	&:focus {
+		background-color: var(--button-background-color--active);
+	}
+}
+
+.password {
+	letter-spacing: 5px;
+}
