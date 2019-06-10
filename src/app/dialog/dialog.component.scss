@@ -1,0 +1,36 @@
+.dialog-shadow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--dialog-shadow-color);
+}
+
+.dialog {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	background-color: RGB(var(--dialog-background-color));
+	box-shadow: var(--drop-shadow);
+	border-radius: 30px;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+
+.dialog-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	z-index: 2;
+}
+
+#asd {
+	position: fixed;
+	top: 0;
+	left: 0;
+}

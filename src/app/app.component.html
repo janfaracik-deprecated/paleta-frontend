@@ -1,9 +1,70 @@
-<!--<app-pane>
-	<app-palettes-list></app-palettes-list>
+<!-- <app-pane>
+	<app-palettes-list (showAccount)="showAccount()"></app-palettes-list>
 </app-pane>
 <app-pane>
 	<app-colors-list></app-colors-list>
 </app-pane>
-<app-active-color></app-active-color>-->
+<app-active-color></app-active-color> -->
 
-<app-setup></app-setup>
+<!-- <app-account></app-account> -->
+
+<!-- <app-share></app-share> -->
+
+<!-- <app-new-team-or-palette></app-new-team-or-palette> -->
+<!-- <app-new-team></app-new-team> -->
+
+<!-- <app-setup></app-setup> -->
+
+<button type="button" name="button" (click)="showModal('custom-modal-1')" style="height: 50px;" class="button">Modal 1</button>
+<app-dialog id="custom-modal-1">
+	<div id="account-title-bar" class="account-title-bar">
+
+	</div>
+	<div id="account-dialog" style="padding: 60px 20px 20px 20px;">
+		<h1 style="font-weight: 800; margin-bottom: 20px;">
+			New
+		</h1>
+		<button type="button" class="button" (click)="showModal('custom-modal-2')" style="text-align: left; display: block; width: 100%; margin-bottom: 20px;">
+			<p>New Team</p>
+			<span>Lorem ipsum bla bla</span>
+		</button>
+
+		<button type="button" class="button" style="text-align: left; display: block; width: 100%;">
+			<p>New Palette</p>
+			<span>Lorem ipsum bla bla</span>
+		</button>
+	</div>
+</app-dialog>
+<app-dialog id="custom-modal-2">
+	<div id="account-title-bar" class="account-title-bar">
+
+	</div>
+	<div id="account-dialog" style="padding: 60px 20px 20px 20px;">
+		<h1 style="font-weight: 800; margin-bottom: 20px;">
+			Layer 2!
+		</h1>
+		<button type="button" class="button" (click)="showModal('custom-modal-3')" style="text-align: left; display: block; width: 100%; margin-bottom: 20px;">
+			<p>New Team</p>
+			<span>Lorem ipsum bla bla</span>
+		</button>
+
+		<button type="button" class="button" style="text-align: left; display: block; width: 100%;">
+			<p>New Palette</p>
+			<span>Lorem ipsum bla bla</span>
+		</button>
+	</div>
+</app-dialog>
+<app-dialog id="custom-modal-3">
+	<div id="account-title-bar" class="account-title-bar">
+
+	</div>
+	<div id="account-dialog" style="padding: 60px 20px 20px 20px;">
+		<h1 style="font-weight: 800; margin-bottom: 20px;">
+			Layer 3!
+		</h1>
+		<button type="button" class="button" style="text-align: left; display: block; width: 100%; margin-bottom: 20px;">
+			<p>New Team</p>
+			<span>Lorem ipsum bla bla</span>
+		</button>
+	</div>
+</app-dialog>

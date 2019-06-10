@@ -1,0 +1,72 @@
+.account-title-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//backdrop-filter: blur(30px);
+	background-color: RGBA(var(--dialog-background-color), 1);
+	opacity: 0;
+	z-index: 1;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		right: 0;
+		height: 5px;
+		background: linear-gradient(black, rgba(black, 0));
+		opacity: .05;
+	}
+}
+
+.account-bg-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 220px;
+	z-index: -1;
+	mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
+}
+
+.account-bg {
+	height: 100%;
+	background-image: url('/assets/images/user.jpg');
+	background-size: cover;
+	background-position: center;
+	filter: blur(20px);
+	opacity: .4;
+	@media (prefers-color-scheme: dark) {
+		opacity: .2;
+	}
+}
+
+.user-image {
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	img {
+		height: 30px;
+	}
+}
+
+.account-image {
+	position: sticky;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 100px;
+	margin-top: 70px;
+	border-radius: 100px;
+	overflow: hidden;
+	z-index: 2;
+	background-image: url('/assets/images/user.jpg');
+	background-size: cover;
+	background-position: center;
+	transition: .1s ease;
+}

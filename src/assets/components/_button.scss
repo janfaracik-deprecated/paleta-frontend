@@ -1,19 +1,66 @@
 .button {
+	position: relative;
 	cursor: pointer;
 	background-color: var(--button-background-color);
+	color: RGB(var(--foreground-color));
 	text-decoration: none;
 	word-wrap: normal;
 	padding: 15px 25px;
-	transition: .2s ease;
+	transition: 0.2s ease;
 	border-radius: 1000px;
 	outline: 0;
 	border: 0;
 	font-size: 1rem;
+
 	&:hover {
-		background-color: var(--button-background-color--hover);
+		background-color: transparent;
+
+		&:after {
+			background-color: var(--button-background-color--hover);
+		}
 	}
+
 	&:active {
-		background-color: var(--button-background-color--active);
 		transform: scale(0.95);
+		background-color: transparent;
+
+		&:after {
+			background-color: var(--button-background-color--active);
+		}
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: inherit;
+		background-color: transparent;
+		transition: inherit;
+	}
+}
+
+.button--active {
+	background-color: blue;
+	color: white;
+}
+
+.overflow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	div {
+		width: 4px;
+		height: 4px;
+		background-color: white;
+		border-radius: 10px;
+		background-color: RGB(var(--foreground-color));
+
+		&:nth-of-type(2) {
+			margin: 0 4px;
+		}
 	}
 }

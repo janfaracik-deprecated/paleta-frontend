@@ -1,0 +1,38 @@
+.table-view {
+	display: block;
+	border-radius: 15px;
+	background-color: RGBA(var(--foreground-color), 0.05);
+	margin: 0 20px 20px;
+	overflow: hidden;
+}
+
+.table-view-item {
+	position: relative;
+	display: block;
+	line-height: 50px;
+	padding: 0 20px;
+	text-decoration: none;
+	border-bottom: 1px solid RGBA(var(--foreground-color), 0.05);
+	transition: 0.2s ease;
+
+	&:last-of-type {
+		border: none;
+	}
+
+	&:hover {
+		background-color: RGBA(var(--foreground-color), 0.05);
+	}
+
+	&:active {
+		background-color: RGBA(var(--foreground-color), 0.1);
+	}
+
+	&:after {
+		content: ">";
+		position: absolute;
+		right: 0;
+		line-height: inherit;
+		padding: inherit;
+		opacity: 0.5;
+	}
+}

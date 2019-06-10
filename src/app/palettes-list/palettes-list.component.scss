@@ -1,0 +1,32 @@
+.list {}
+
+h4 {
+	font-weight: 600;
+	margin-bottom: 5px;
+	opacity: 0.6;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	letter-spacing: 1px;
+}
+
+.list-fade {
+	position: relative;
+	display: block;
+	overflow: hidden;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 30px;
+		background: linear-gradient(to right, RGBA(var(--background-color), 0%), RGB(var(--background-color)));
+	}
+
+	h4 {
+		white-space: nowrap;
+		user-select: none;
+		pointer-events: none;
+	}
+}

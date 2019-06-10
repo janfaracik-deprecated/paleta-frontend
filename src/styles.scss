@@ -3,20 +3,16 @@
 :root {
 	--background-color: 255, 255, 255;
 	--foreground-color: 50, 50, 60;
-
 	/* Dialog */
 	--dialog-shadow-color: rgba(0, 0, 0, 0.15);
 	--dialog-background-color: 255, 255, 255;
 	--dialog-border-color: 255, 255, 255;
-	--dialog-border-radius: 6px;
-
+	--dialog-border-radius: 18px;
 	/* Button */
 	--button-background-color: rgba(0, 0, 0, 0.05);
 	--button-background-color--hover: rgba(0, 0, 0, 0.1);
 	--button-background-color--active: rgba(0, 0, 0, 0.15);
-
 	--drop-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.05), 0 -1px 5px rgba(0, 0, 0, 0.05);
-
 	--input-color: 242, 242, 242;
 	--accent-color: #000000;
 	--red: #ff3b30;
@@ -32,16 +28,14 @@
 	:root {
 		--background-color: 0, 0, 0;
 		--foreground-color: 255, 255, 255;
-
 		/* Dialog */
 		--dialog-shadow-color: rgba(0, 0, 0, 0.75);
 		--dialog-background-color: 30, 30, 30;
 		--dialog-border-color: 40, 40, 40;
-
 		/* Button */
-		--button-background-color: rgba(255, 255, 255, 0.05);
-		--button-background-color--hover: rgba(255, 255, 255, 0.1);
-		--button-background-color--active: rgba(255, 255, 255, 0.15);
+		--button-background-color: rgba(255, 255, 255, 0.1);
+		--button-background-color--hover: rgba(255, 255, 255, 0.15);
+		--button-background-color--active: rgba(255, 255, 255, 0.2);
 	}
 }
 
@@ -75,4 +69,69 @@ svg {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.title-bar {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	margin-bottom: 20px;
+
+	h1 {
+		font-weight: 800;
+		line-height: 36px;
+	}
+
+	.buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.button {
+		padding: 0;
+		width: 36px;
+		height: 36px;
+		margin-left: 20px;
+
+		img {
+			width: 36px;
+			height: 36px;
+		}
+	}
+}
+
+
+.item {
+	position: relative;
+	width: 100%;
+	line-height: 44px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -14px;
+		right: -14px;
+		bottom: 0;
+		border-radius: 12px;
+		transition: 0.2s ease;
+	}
+
+	&:hover {
+		&:before {
+			background-color: var(--button-background-color);
+		}
+	}
+
+	&:active {
+		&:before {
+			background-color: var(--button-background-color);
+		}
+	}
+}
+
+.item--selected {
+	&:before {
+		background-color: var(--button-background-color);
+	}
 }

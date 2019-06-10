@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-palettes-list',
-  templateUrl: './palettes-list.component.html',
-  styleUrls: ['./palettes-list.component.scss']
+	selector: 'app-palettes-list',
+	templateUrl: './palettes-list.component.html',
+	styleUrls: ['./palettes-list.component.scss']
 })
 export class PalettesListComponent implements OnInit {
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
+
+	@Output() showAccount = new EventEmitter();
+
+	callParent() {
+		this.showAccount.emit(null);
+	}
 
 }
